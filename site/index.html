@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="app.css"></link>
+	<link rel="stylesheet" href="interactive.css"></link>
+</head>
+<body class="flex center">
+	<section class='margin-neg flex column'>
+		<div class="blurp">
+			<h1>The Dilemma</h1>
+			<p>It's 1970 and you love mathematics, but haven't quite mastered the art of adding up small numbers. To help your claim as the next Einstein, you devise a plan to make a machine called the adder, in which you will fool and amaze people with your new found ability. But, where to start you ask?
+			</p>
+			<p>Like any good adder, before being able to add multiple bits, you started only being able to add two. Over in the chips directory, conviently you will find three files that need finishing. Start with <code>HalfAdder.js</code>. Once you think you've got it working, run:
+			Then move onto <code>FullAdder.js</code> <i>(hint you will need HalfAdder)</i> and finally <code>Add4.js</code>. Make sure to test your chip before starting the next.
+			</p>
+			<code class="banner flex">
+				$ yarn run test:HalfAdder
+			</code>
+			<p>When you think you are ready to rock and roll, all there is left to do is to watch the adder do that arthimetic it does so damn well. Try picking your two favourite numbers less than 8 and see if it works! Groovy, though 14 + 4 is bit of a dilemma. Nevermind, 1972 isn't too far away.
+			</p>
+
+		</div>
+		<div class="flex">
+			<div class='flex inputs'>
+				<div class='flex pos-rel'>
+					<input type='number' value='0' step='1' min='0' max='15' id='input-a'>
+					<label class='input-label input-label-a'>a</label>
+					<div id='wires-a' class='wires flex'>
+						<span class='wire'></span>
+						<span class='wire'></span>
+						<span class='wire'></span>
+						<span class='wire'></span>
+					</div>
+				</div>
+
+				<div class='flex pos-rel'>
+					<input type='number' value='0' step='1' min='0' max='15' id='input-b'>
+					<label class='input-label input-label-b'>b</label>
+					<div id='wires-b' class='wires flex'>
+						<span class='wire'></span>
+						<span class='wire'></span>
+						<span class='wire'></span>
+						<span class='wire'></span>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div class='flex center pos-rel add4'>
+					<div id='pins-a'>
+						<span class="pin">a[3]</span>
+						<span class="pin">a[2]</span>
+						<span class="pin">a[1]</span>
+						<span class="pin">a[0]</span>
+					</div>
+					<div id='pins-b'>
+						<span class="pin">b[3]</span>
+						<span class="pin">b[2]</span>
+						<span class="pin">b[1]</span>
+						<span class="pin">b[0]</span>
+					</div>
+					<h1>Add4</h1>
+					<div id='pins-z'>
+						<span class="pin">z[3]</span>
+						<span class="pin">z[2]</span>
+						<span class="pin">z[1]</span>
+						<span class="pin">z[0]</span>
+					</div>
+					<div id='pins-c'>
+						<span class="pin">c</span>
+					</div>
+				</div>
+			</div>
+
+			<div class='flex outputs'>
+				<div class='flex'>
+					<div id='wires-z' class='wires flex'>
+						<span class='wire'></span>
+						<span class='wire'></span>
+						<span class='wire'></span>
+						<span class='wire'></span>
+					</div>
+					<div id='output-z' class='flex center'>
+						0
+					</div>
+				</div>
+				<div class='flex'>
+					<div id='wires-c' class='wires flex'>
+						<span class='wire'></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="./core.js"></script>
+	<script src="./encoding.js"></script>
+	<script src="./App.js"></script>
+	<script>
+		(() => {
+			const $ = (...args) =>
+				document.querySelector(...args);
+
+			const app = new App({
+				encoding: { dec2bin, bin2dec },
+				adder: Add4,
+				range: [0, 15],
+				elements: {
+					inputs: { a: $('#input-a'), b: $('#input-b') },
+					wires: { a: $('#wires-a'), b: $('#wires-b'), z: $('#wires-z'), c: $('#wires-c') },
+					pins: { a: $('#pins-a'), b: $('#pins-b'), z: $('#pins-z'), c: $('#pins-c') },
+					outputs: { z: $('#output-z') },
+				},
+			});
+
+			app.run();
+		})();
+	</script>
+</body>
+</html>

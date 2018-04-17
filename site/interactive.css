@@ -1,0 +1,8 @@
+#input-a:focus, #input-b:focus {
+	border-color: #333;
+}
+
+#input-a:focus + .input-label,
+#input-b:focus + .input-label {
+	color: #000;
+}

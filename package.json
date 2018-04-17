@@ -1,0 +1,16 @@
+{
+	"version": "1.0.0",
+	"license": "MIT",
+	"scripts": {
+		"start": "./lib/start.sh chips",
+		"test": "jest",
+		"test:HalfAdder": "jest ./chips/__tests__/HalfAdder.test.js",
+		"test:FullAdder": "jest ./chips/__tests__/FullAdder.test.js",
+		"test:Add4": "jest ./chips/__tests__/Add4.test.js",
+		"test:chips": "jest ./chips",
+		"test:gates": "jest ./gates"
+	},
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}

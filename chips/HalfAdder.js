@@ -27,8 +27,8 @@ const HalfAdder = (() => {
 	function HalfAdder ({ a, b }) {
 		// start here
 		return {
-			z: 0,
-			c: 0,
+			z: '0',
+			c: '0',
 		};
 	};
 

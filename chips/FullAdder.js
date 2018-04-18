@@ -2,8 +2,8 @@
  * ===========================================
  * "Two halves don't make a full" - OR gate (circa 2018)
  * 
- * Now you know how the input and output pins concept works. Similar drill
- * this time, except you now need to handle a third input pin called c-in.
+ * Now you know how the input and output wires concept works. Similar drill
+ * this time, except you now need to handle a third input wire called c-in.
  * Sometimes though it is just easier to think of this gate as summing
  * three binary digits, and then just like HalfAdder, setting (a + b + c-in)
  * to z and the carry of (a + b + c-in) to c-out

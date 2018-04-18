@@ -3,10 +3,10 @@
  * "Before you can be full, you must be half" - FullAdder (circa 2018)
  * 
  * The aim of the game here is that imagine the named arguments a, b are
- * pins leading into your chip. They can either be a '1' (high) or '0' (low).
- * Now imagine there are two pins, z and c leading out of your chip.
- * The HalfAdder's job is twofold. It needs to work out the a + b (z pin)
- * and also the carry out of a + b (c pin).
+ * wires leading into your chip. Each wire can either be a '1' (high) or '0' (low).
+ * Now imagine there are another two wires, z and c leading out of your chip.
+ * The HalfAdder's job is twofold. It needs to work out the a + b (z wire)
+ * and also the carry out of a + b (c wire).
  *
  * Note: you will need to use the logic gates defined in ../gates
  * For example, if you want to use XOR in this chip,

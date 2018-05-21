@@ -29,7 +29,7 @@ const FullAdder = (() => {
 	function FullAdder ({ a, b, c }) {
 		// start here
 		return {
-			z: '0'
+			z: '0',
 			c: '0',
 		};
 	}

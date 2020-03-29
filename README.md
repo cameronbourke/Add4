@@ -10,6 +10,8 @@ Next, make sure you have `yarn` or `npm` installed, then run:
 
 For MacOS users, Chrome should automatically open and focus the window outlining the dilemma!
 
+When you are all setup, you should now have yourself a broken 4-bit adder like [this one!](https://cameronbourke.github.io/Add4/site/)
+
 ## The Dilemma
 
 It's 1970 and you love mathematics, but haven't quite mastered the art of adding up small numbers. To help your claim as the next Einstein, you devise a plan to make a machine called the adder, in which you will fool and amaze people with your new found ability. But, where to start you ask?
